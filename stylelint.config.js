@@ -17,6 +17,7 @@ module.exports = {
     "keyframe-declaration-no-important": true,
     "media-feature-name-no-unknown": true,
     "no-empty-source": true,
+    "no-trailing-slash": true,
     "no-extra-semicolons": true,
     "no-invalid-double-slash-comments": true,
     "property-no-unknown": true,
