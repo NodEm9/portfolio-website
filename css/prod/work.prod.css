@@ -19,7 +19,7 @@ h1 {
 
 .project-list__item {
   background-color: #d3d3d3;
-  padding: 10px;
+  padding: 30px;
   width: auto;
   height: auto;
   font-size: 16px;
@@ -120,10 +120,6 @@ h1 {
 
 .project-list__item:visited a {
   color: #0a65a7;
-}
-
-.project-list__item p  {
-  padding: 15px 0;
 }
 
 @media all and (max-width: 500px) {
