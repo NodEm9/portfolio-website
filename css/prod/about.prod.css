@@ -9,7 +9,6 @@
   padding: 20px;
   min-height: 60vh;
   color: #333;
-  width: 100%;
   margin: 0 auto;
 }
 
@@ -54,13 +53,13 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px;
-
 }
 
 
 .bio-section .bio-section__intro {
   text-align: center;
   padding: 16px;
+  margin-bottom: 15px;
 }
 
 .bio-section .bio-section__intro p {
@@ -77,8 +76,9 @@ h1 {
   font-weight: inherit;
 }
 
-.bio-section__hometown {
-  padding: 30px;
+.button {
+  padding: 15px 30px;
+  margin-bottom: 40px;
 }
 
 .sun {
@@ -144,14 +144,6 @@ td {
     width: 100%;
   }
 
-  .main__contents {
-    width: 100%;
-  }
-
-  .bio-section {
-    width: 100%;
-  }
-
   .bio-section__intro p {
     font-size: 16px;
   }
@@ -175,14 +167,6 @@ td {
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .main {
-    width: 100%;
-  }
-
-  .main__contents {
-    width: 100%;
-  }
-
-  .bio-section {
     width: 100%;
   }
 
@@ -212,15 +196,7 @@ td {
   .main {
     width: 50%;
   }
-
-  .main__contents {
-    width: 100%;
-  }
-
-  .bio-section {
-    width: 100%;
-  }
-
+  
   .bio-section__intro p {
     font-size: 16px;
   }
