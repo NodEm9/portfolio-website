@@ -50,9 +50,7 @@ h1 {
 }
 
 label {
-  margin-top: 6px;
-  font-weight: 500;
-  font-size: calc(16px * 0.9);
+  display: none;
 }
 
 #email {
@@ -75,6 +73,7 @@ label {
 
 input {
   padding: 10px;
+  margin: 10px 0;
   border-radius: 5px;
   border: 1px solid #60615eab;
   font-size: calc(16px * 0.9);
@@ -82,9 +81,27 @@ input {
 
 textarea {
   padding: 10px;
+  margin: 10px 0;
   border-radius: 5px;
   border: 1px solid #60615eab;
   font-size: calc(16px * 0.9);
+}
+
+.input-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.error-message {
+  color: red;
+  font-size: calc(16px * 0.9);
+  margin-top: 6px;
 }
 
 button {
