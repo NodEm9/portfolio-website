@@ -40,7 +40,10 @@ h1 {
   border-radius: 5px;
 }
 
-label,
+label {
+  display: none;
+}
+
 #email,
 #name,
 #message {
@@ -52,9 +55,22 @@ label,
 input,
 textarea {
   padding: 10px;
+  margin: 10px 0;
   border-radius: 5px;
   border: 1px solid var(--border-color);
   font-size: calc(var(--font-size) * 0.9);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.error-message {
+  color: red;
+  font-size: calc(var(--font-size) * 0.9);
+  margin-top: 6px;
 }
 
 button {
