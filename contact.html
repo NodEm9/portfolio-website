@@ -102,14 +102,16 @@
         </div>
         <!-- Conract form -->
         <form  class="contact__form">
-          <label for="email">Email </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="Your Email"
-          />
+          <div class="input-wrapper">
+            <label for="email">Email </label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+            />
+          </div>
+         <div class="input-wrapper">
           <label for="telephone">Number </label>
           <input
             type="tel"
@@ -117,16 +119,18 @@
             name="telephone"
             placeholder="Enter Mobile Number"
           />
-          <label for="message">Message</label>
+         </div>
+          <div class="input-wrapper">
+            <label for="message">Message</label>
           <textarea
             name="message"
             id="message"
             cols="30"
             rows="10"
             maxlength="240"
-            required
             placeholder="Your Message"
           ></textarea>
+          </div>
           <button type="submit">Send</button>
         </form>
       </div>
@@ -160,5 +164,6 @@
     </footer>
 
     <script src="js/tota11y.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
