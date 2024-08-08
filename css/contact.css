@@ -45,9 +45,9 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: var(--font-weight-bold);
-  color: var(--primary-color);
+  color: #6b9e1ac7;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: none;
 }
 
