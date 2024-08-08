@@ -29,8 +29,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="dist/style.min.css" />
-    <link rel="stylesheet" href="dist/about.min.css" />
+    <!-- <link rel="stylesheet" href="dist/style.min.css" /> -->
+    <!-- <link rel="stylesheet" href="dist/about.min.css" /> -->
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="css/about.css" />
     <title>About Emmanuel Nodolomwanyi</title>
   </head>
   <body>
@@ -38,35 +40,41 @@
       <div class="page-header__item">
         <a href="index.html" class="website__name">
           <img
-            src="./img/w-logo.svg"
+            src="img/w-logo.svg"
             id="w__logo"
             alt="Emma Nodol website log"
           />
           Emma Nodol
         </a>
       </div>
-      <nav class="main-navigation page-header__item">
-        <ul id="menubar" role="menubar" class="navigation-list">
-          <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item"
+      <div class="hamburger burgerButton">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <nav class="navigation">
+        <p class="close">X</p>
+        <ul id="menubar" role="navigation" class="navigation-list">
+          <li role="presentation" class="navigation-list__item">
+            <a href="index.html" role="menuitem" class="navigation-list__item__link"
               >Home</a
             >
           </li>
-          <li role="presentation">
-            <a href="work.html" role="menuitem" class="navigation-list__item"
+          <li role="presentation" class="navigation-list__item">
+            <a
+              href="work.html"
+              role="menuitem"
+              class="navigation-list__item__link"
               >Work</a
             >
           </li>
-          <li role="presentation">
-            <a
-              href="about.html"
-              role="menuitem"
-              class="navigation-list__item--active"
+          <li role="presentation" class="navigation-list__item">
+            <a href="about.html" role="menuitem" class="navigation-list__item__link--active"
               >About Me</a
             >
           </li>
-          <li role="presentation">
-            <a href="contact.html" role="menuitem" class="navigation-list__item"
+          <li role="presentation" class="navigation-list__item">
+            <a href="contact.html" role="menuitem" class="navigation-list__item__link"
               >Contact Me</a
             >
           </li>
@@ -75,8 +83,8 @@
     </header>
     <main class="main">
       <h1>About Me</h1>
-     <div class="main__contents">
-      <div
+     <!-- <div class="main__contents"> -->
+      <section
       class="bio-section"
       role="doc-bibliography"
     >
@@ -90,8 +98,10 @@
           </ul>
       </div>
       <a href="#" target="_blank" class="button button-primary">Download my CV</a>
+    </section>
+      <section>
       <div class="bio-section__hometown">
-        <svg id="about-picture" xmlns="http://www.w3.org/2000/svg" class="berlin-illustration" height="auto" viewBox="0 0 700 505" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg id="about-picture" xmlns="http://www.w3.org/2000/svg" class="berlin-illustration" height="240" viewBox="0 0 700 505" xmlns:xlink="http://www.w3.org/1999/xlink">
           <defs>
               <polygon id="a" points=".06 231.917 .06 .929 688.717 .929 688.717 231.917"></polygon>
           </defs>
@@ -691,8 +701,10 @@
           </g>
       </svg>
       </div>
-    </div>
-    <div id="skills" class="skills">
+      </section>
+
+<!-- Skills Start -->
+    <section id="skills" class="skills">
       <h2>Skills</h2>
       <table>
         <thead>
@@ -721,7 +733,7 @@
           <tr>
             <th scope="row">React</th>
             <td>3</td>
-            <td>Intermediate</td>
+            <td>Advanced</td>
           </tr>
           <tr>
             <th scope="row">Nextjs</th>
@@ -736,7 +748,7 @@
           <tr>
             <th scope="row">MongoDB/SQL</th>
             <td>3</td>
-            <td>Intermediate</td>
+            <td>Advanced</td>
           </tr>
           <tr>
             <th scope="row">Python</th>
@@ -745,8 +757,9 @@
           </tr>
         </tbody>
       </table>
-    </div>
-     </div>
+    </section>
+    <!-- Skill end -->
+     <!-- </div> -->
     </main>
     <footer id="footer" class="page-footer">
       <h2>Find Me</h2>
@@ -777,5 +790,7 @@
     </footer>
 
     <script src="js/tota11y.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="./js/navbar.js"></script>
   </body>
 </html>

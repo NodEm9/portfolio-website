@@ -34,7 +34,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="dist/style.min.css" />
+    <!-- <link rel="stylesheet" href="dist/style.min.css" /> -->
+    <link rel="stylesheet" href="css/styles.css">
     <title>Portfolio Website</title>
   </head>
   <body>
@@ -42,35 +43,45 @@
       <div class="page-header__item">
         <a href="index.html" class="website__name">
           <img
-            src="./img/w-logo.svg"
+            src="img/w-logo.svg"
             id="w__logo"
             alt="Emma Nodol website log"
           />
           Emma Nodol
         </a>
       </div>
-      <nav class="page-header__item">
-        <ul id="menubar" role="menubar" class="navigation-list">
-          <li role="presentation">
-            <a
-              href="index.html"
-              role="menuitem"
-              class="navigation-list__item--active"
-              >Home</a
-            >
+      <div class="hamburger burgerButton">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <nav class="navigation">
+        <p class="close">X</p>
+        <ul id="menubar" role="navigation" class="navigation-list">
+          <li role="presentation" class="navigation-list__item">
+            <a 
+              href="index.html" 
+              role="menuitem" 
+              class="navigation-list__item__link--active"
+              >
+              Home
+              </a>
           </li>
-          <li role="presentation">
-            <a href="work.html" role="menuitem" class="navigation-list__item"
+          <li role="presentation" class="navigation-list__item">
+            <a
+              href="work.html"
+              role="menuitem"
+              class="navigation-list__item__link"
               >Work</a
             >
           </li>
-          <li role="presentation">
-            <a href="about.html" role="menuitem" class="navigation-list__item"
+          <li role="presentation" class="navigation-list__item">
+            <a href="about.html" role="menuitem" class="navigation-list__item__link"
               >About Me</a
             >
           </li>
-          <li role="presentation">
-            <a href="contact.html" role="menuitem" class="navigation-list__item"
+          <li role="presentation" class="navigation-list__item">
+            <a href="contact.html" role="menuitem" class="navigation-list__item__link"
               >Contact Me</a
             >
           </li>
@@ -126,7 +137,9 @@
       </div>
       <p>&copy; 2024 Emma Nodol <span>Portfolio Website</span></p>
     </footer>
-
-    <script src="js/tota11y.min.js"></script>
+<!-- 
+    <script src="js/tota11y.min.js"></script> -->
+    <script src="js/script.js"></script>
+    <script src="./js/navbar.js"></script>
   </body>
 </html>

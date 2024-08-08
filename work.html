@@ -34,8 +34,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/prod/style.prod.css" />
-    <link rel="stylesheet" href="css/prod/work.prod.css" />
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+    <!-- <link rel="stylesheet" href="dist/work.min.css" /> -->
+    <link rel="stylesheet" href="css/work.css">
     <title>Projects of Emmanuel Nodolomwanyi</title>
   </head>
   <body>
@@ -43,48 +44,54 @@
       <div class="page-header__item">
         <a href="index.html" class="website__name">
           <img
-            src="./img/w-logo.svg"
+            src="img/w-logo.svg"
             id="w__logo"
             alt="Emma Nodol website log"
           />
           Emma Nodol
         </a>
       </div>
-      <nav class="page-header__item">
-        <ul id="menubar" role="menubar" class="navigation-list">
-          <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item"
+      <div class="hamburger burgerButton">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <nav class="navigation">
+        <p class="close">X</p>
+        <ul id="menubar" role="navigation" class="navigation-list">
+          <li role="presentation" class="navigation-list__item">
+            <a href="index.html" role="menuitem" class="navigation-list__item__link"
               >Home</a
             >
           </li>
-          <li role="presentation">
+          <li role="presentation" class="navigation-list__item">
             <a
               href="work.html"
               role="menuitem"
-              class="navigation-list__item--active"
+              class="navigation-list__item__link--active"
               >Work</a
             >
           </li>
-          <li role="presentation">
-            <a href="about.html" role="menuitem" class="navigation-list__item"
+          <li role="presentation" class="navigation-list__item">
+            <a href="about.html" role="menuitem" class="navigation-list__item__link"
               >About Me</a
             >
           </li>
-          <li role="presentation">
-            <a href="contact.html" role="menuitem" class="navigation-list__item"
+          <li role="presentation" class="navigation-list__item">
+            <a href="contact.html" role="menuitem" class="navigation-list__item__link"
               >Contact Me</a
             >
           </li>
         </ul>
       </nav>
     </header>
-    <section class="project">
+    <main class="project">
       <h1>My Work</h1>
       <div class="project-list">
         <div class="project-list__item">
           <h2>Portfolio Website</h2>
           <img
-            src="/img/emma-portfolio-website-img.webp"
+            src="img/emma-portfolio-website-img.webp"
             alt="Emmanuel's portfolio website image."
             class="project-list__item--img"
           />
@@ -94,72 +101,122 @@
             first Achievement project in the CareerFoundry Full-Stack Web
             Development course.
           </p>
-          <a href="https://github.com/NodEm9/portfolio-website" target="_blank"
-            ><span id="icon">&#128065;</span>See project on Guthub</a
-          >
+          <div class="ext-link">
+            <a href="https://nodem9.github.io/portfolio-website/" target="_blank" class="ext-link__link"
+            ><span id="icon">&#128065;</span>View App</a>
+          <a href="https://github.com/NodEm9/portfolio-website" target="_blank" class="ext-link__link"
+            ><span id="icon1">&#128065;</span>See project on Guthub</a>
+          </div>
         </div>
         <div class="project-list__item">
-          <h2>Project 2</h2>
+          <h2>Pokédex App</h2>
           <img
-            src="https://placehold.co/600x400"
+            src="img/pokemon-web-img.png"
             alt="project image comes here."
             class="project-list__item--img"
           />
           <p>
-            <h2>Card Will be Updated Soon.</h2>
+            This app is built Html, CSS, JQuery and Bootstrap.
+            It is a Pokédex app that allows users to search for their favorite Pokémon and view their details.
+             The app uses the PokéAPI to fetch data about the Pokémon. 
+            The app is responsive and works on all devices.
           </p>
-          <a href="#">See project on Guthub</a>
+        <div class="ext-link">
+          <a href="https://nodem9.github.io/pokemonapp/" class="ext-link__link">
+            <span id="icon2">&#128065;</span>
+            View App
+          </a>
+          <a href="https://github.com/NodEm9/pokemonapp"  class="ext-link__link">
+            <span id="icon3">&#128065;</span>
+            See project on Guthub
+          </a>
+        </div>
         </div>
         <div class="project-list__item">
-          <h2>Project 3</h2>
+          <h2>Simple Todo App</h2>
           <img
-            src="https://placehold.co/600x400"
+            src="img/todoapp.png"
             alt="project image comes here."
             class="project-list__item--img"
           />
           <p>
-            <h2>Card Will be Updated Soon.</h2>
+            This is a simple to-do list app that allows users to add, edit, and delete tasks. 
+            The app is built with HTML, CSS, and JavaScript. 
+            The app is responsive and works on all devices.
           </p>
-          <a href="#">See project on Guthub</a>
+          <div class="ext-link">
+            <a href="https://nodem9.github.io/to-do-list-app/index.html" class="ext-link__link">
+              <span id="icon4">&#128065;</span>View App</a>
+            <a href="https://github.com/NodEm9/to-do-list-app" class="ext-link__link">
+              <span id="icon5">&#128065;</span>See project on Guthub</a>
+          </div>
         </div>
         <div class="project-list__item">
-          <h2>Project 4</h2>
+          <h2>myFlix App</h2>
           <img
-            src="https://placehold.co/600x400"
+            src="./img/myflixapp.png"
             alt="project image comes here."
             class="project-list__item--img"
           />
           <p>
-            <h2>Card Will be Updated Soon.</h2>
+            This is a movie app that allows users to search for movies and view details about the movie.
+            Users can also add movies to their favorite list, perform CRUD operation on thier respective profile.  
+            The app uses backend API to fetch data about the movies, the enpoints and return JSON types can be found in the documentation. 
+            The app is built with React, Nodejs, Express and MongoDB which makes it a MERN stack application. 
+            The app is responsive and works on all devices.
           </p>
-          <a href="#">See project on Guthub</a>
+          <div class="ext-link">
+            <a href="https://myflix-movieoasis.netlify.app/login" 
+            target="_blank" class="ext-link__link">
+            <span id="icon6">&#128065;</span>View App</a>
+            <a href="https://github.com/NodEm9/myFlix-client" 
+            target="_blank" class="ext-link__link">
+            <span id="icon7">&#128065;</span>See project on Guthub</a>
+          </div>
         </div>
         <div class="project-list__item">
-          <h2>Project 5</h2>
+          <h2>Meet App</h2>
           <img
-            src="https://placehold.co/600x400"
+            src="./img//meetapp.png"
             alt="project image comes here."
             class="project-list__item--img"
           />
           <p>
-            <h2>Card Will be Updated Soon.</h2>
+            This Meet App is a serverless, progressive web application (PWA) that uses the Google Calendar API to fetch upcoming events.
+            The app allows users to filter events by city, show/hide event details, specify the number of events they want to view, and add an event to their Google Calendar.
+            The app is built with React and uses a test-driven development (TDD)and (BDD) approach. All tests are written using Jest, Ghekins, Puppeteer and Jest-Cucumber.
+            Atatus was used to monitor the performance of the app and Recharts to display data visualixation of the events of respective cities.
           </p>
-          <a href="#">See project on Guthub</a>
+          <div class="ext-link">
+            <a href="https://nodem9.github.io/meet" 
+            target="_blank" class="ext-link__link">
+            <span id="icon8">&#128065;</span>View App</a>
+            <a href="https://github.com/NodEm9/meet" 
+            target="_blank" class="ext-link__link">
+            <span id="icon9">&#128065;</span>See project on Guthub</a>
+          </div>
         </div>
         <div class="project-list__item">
-          <h2>Project 6</h2>
+          <h2>Ecommaerce Website</h2>
           <img
-            src="https://placehold.co/600x400"
+            src="./img/ecopicture.png"
             alt="project image comes here."
             class="project-list__item--img"
           />
           <p>
-            <h2>Card Will be Updated Soon.</h2>
+            A Fullstack Ecommerce website built with React, Next.js, Sanity, Tailwind, ShadcnUI and Stripe. The app allows users to search for products, view details about the product, add products to cart, and make payment using stripe.
           </p>
-          <a href="#">See project on Guthub</a>
+          <div class="ext-link">
+            <a href="https://ecommerce-rust-two.vercel.app" 
+            target="_blank" class="ext-link__link">
+            <span id="icon10">&#128065;</span>View App</a>
+            <a href="            https://github.com/NodEm9/ecommerce" 
+            target="_blank" class="ext-link__link">
+            <span id="icon11">&#128065;</span>See project on Guthub</a>
+          </div>
         </div>
       </div>
-    </section>
+    </main>
     <footer id="footer" class="page-footer">
       <h2>Find Me</h2>
       <div id="social__icons">
@@ -191,6 +248,8 @@
       <p>&copy; 2024 Emma Nodol <span>Portfolio Website</span></p>
     </footer>
 
-    <script src="js/tota11y.min.js"></script>
+    <!-- <script src="js/tota11y.min.js"></script> -->
+    <!-- <script src="js/script.js"></script> -->
+    <script src="./js/navbar.js"></script>
   </body>
 </html>
