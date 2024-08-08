@@ -9,7 +9,7 @@
   --active-color: #1f2ca9;
   --close-button: #ff6347;
   --bg-main-color: #f5f5f5;
-  --visited-color: #0a65a7;
+  --visited-color: #0b4067;
   --border-color: #60615eab;
   --font-weight: 500;
   --font-weight-bold: 700;
@@ -98,7 +98,6 @@ body {
     margin-right: 50px;
     margin-top: 20px;
     font-size: 20px;
-    color: tomato;
     border: 1px solid var(--font-color);
     border-radius: 50%;
     padding: 10px 15px;
@@ -202,6 +201,12 @@ body {
     font-weight: var(--font-weight-bold);
   }
 
+  #profession {
+    font-size: calc(var(--font-size) + 0.1vw);
+    font-weight: var(--font-weight-bold);
+    color: var(--tertiary-color);
+  }
+
   p {
     font-size: var(--font-size);
   }
@@ -212,9 +217,10 @@ body {
   }
 
   #icon {
-    font-size: calc(var(--font-size) + 0.1vw);
+    font-size: calc(var(--font-size) + 0.5vw);
     margin-right: 4px;
     font-weight: var(--font-weight-bold);
+    color: #dbffd9;
   }
 
   .button-primary {
@@ -240,12 +246,14 @@ body {
     width: auto;
     align-items: center;
     justify-content: center;
+    background: var(--bg-primary-color);
+    color: var(--font-color-light);
     border: 1px solid var(--border-color);
     padding: 8px 20px;
     border-radius: 50px;
     font-size: calc(var(--font-size) + 0.5vw);
     font-family: inherit;
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight);
     box-shadow: 4px 3px 19px 0px rgba(0, 0, 0, 0.3);
     transition: opacity 0.2s;
   }
@@ -407,6 +415,7 @@ body {
     float: right;
     margin-right: 50px;
     font-size: 20px;
+    background: red;
     color: var(--font-color-light);
     border: 1px solid var(--close-button);
     border-radius: 50%;
@@ -444,31 +453,14 @@ body {
   h1 {
     font-size: calc(var(--font-size) * 1.5);
   }
+
+  .button-secondary {
+    font-size: 14px;
+    padding: 14px 20px;
+    border: #ffffff;
+    background-color: var(--primary-color);
+  }
 }
-
-/* @media all and (min-width: 750px) and (max-width: 1024px) {
-  .navigation {
-    display: block;
-  }
-
-  .page-header {
-    width: 100%;
-    padding: 40px;
-  }
-  
- .navigation-list {
-    font-size: 28px;
-  }
-
-  .hamburger {
-    display: block;
-    float: right;
-  }
-
-  .page-header__item:last-child {
-    text-align: center;
-  }
- } */
 
 @keyframes bounce {
   0% {

@@ -5,21 +5,23 @@
   --font-weight: 500;
   --font-weight-bold: 700;
   --font-size: 16px;
+  --visited-color: #0b4067;
   --close-button: #ff6347;
   --active-color: #1f2ca9;
 }
 
 body {
   display: grid;
-  grid-template-areas: 
-  "header"
-  "main"
-  "footer";
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
   grid-template-rows: auto 1fr auto;
   background-color: var(--bg-main-color);
   min-height: min-content;
   min-height: 100vh;
   overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
 .page-header {
@@ -120,7 +122,7 @@ body {
   font-size: 18px;
 }
 
-.navigation-list__item .navigation-list__item__link  {
+.navigation-list__item .navigation-list__item__link {
   font-weight: var(--font-weight);
   display: block;
   text-decoration: none;
@@ -131,7 +133,7 @@ body {
 }
 
 .navigation-list__item__link:visited {
-  color:  var(--visited-color);
+  color: var(--visited-color);
 }
 
 .navigation-list__item__link:hover,
@@ -198,7 +200,7 @@ input,
 textarea {
   padding: 10px;
   margin: 10px 0;
-  width:  450px;
+  width: 450px;
   border-radius: 5px;
   border: 1px solid var(--border-color);
   font-size: calc(var(--font-size) * 0.9);
@@ -300,10 +302,7 @@ button:focus {
     transform: translate(-5px, 0);
   }
 
-  .navigation 
-  .navigation-list__item 
-  .navigation-list__item__link 
-  .change {
+  .navigation .navigation-list__item .navigation-list__item__link .change {
     display: block;
   }
 
@@ -323,7 +322,8 @@ button:focus {
     width: 100%;
   }
 
-  .contact__form, .input-wrapper {
+  .contact__form,
+  .input-wrapper {
     width: 100%;
   }
 
@@ -336,7 +336,7 @@ button:focus {
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .navigation {
-    display:  none;
+    display: none;
   }
 
   .navigation .navigation-list .navigation-list__item__link {
@@ -424,6 +424,7 @@ button:focus {
     float: right;
     margin-right: 50px;
     font-size: 20px;
+    background: red;
     color: var(--font-color-light);
     border: 1px solid var(--close-button);
     border-radius: 50%;
@@ -474,7 +475,9 @@ button:focus {
     padding: 20px;
   }
 
-  form input, textarea, button {
+  form input,
+  textarea,
+  button {
     width: 100%;
   }
 }
@@ -483,6 +486,7 @@ button:focus {
   0% {
     transform: scale(0);
   }
+
   60% {
     transform: scale(1.2);
   }
@@ -490,4 +494,4 @@ button:focus {
   100% {
     transform: scale(1);
   }
- }
+}
