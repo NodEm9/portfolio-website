@@ -492,14 +492,14 @@ body {
     font-size: calc(16px + 2vw);
     margin-right: 4px;
     font-weight: var(--font-weight-bold);
-    color: #000000;
+    color: #ffffff;
   }
 
   .button-secondary {
     font-size: 22px;
     padding: 14px 20px;
     border: #081a8e;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
   }
 }
