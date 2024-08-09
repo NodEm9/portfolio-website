@@ -293,6 +293,7 @@ body {
   align-items: center;
   padding: 20px;
   color: var(--font-color);
+  background: linear-gradient(90deg, rgba(195, 199, 201, 0.8) 0%, rgba(190, 190, 209, 0.8) 100%);
 }
 
 .page-footer h2 {
@@ -486,6 +487,10 @@ body {
 
   h1 {
     font-size: calc(var(--font-size) * 1.5);
+  }
+
+  .page-footer {
+    background: linear-gradient(90deg, rgba(195, 199, 201, 0.8) 0%, rgba(190, 190, 209, 0.8) 100%);
   }
 
   #icon {

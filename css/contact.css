@@ -280,7 +280,8 @@ button:focus {
   align-items: center;
   padding: 20px;
   color: var(--font-color);
-  margin-bottom: 4rem;
+  background: linear-gradient(90deg, rgba(195, 199, 201, 0.8) 0%, rgba(190, 190, 209, 0.8) 100%);
+
 }
 
 .page-footer a {

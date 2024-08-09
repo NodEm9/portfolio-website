@@ -37,7 +37,7 @@ body {
   position: fixed;
   display: flex;
   width: 100%;
-  background: linear-gradient(90deg, rgba(195, 199, 201, 0.8) 0%, rgba(190, 190, 209, 0.8) 100%);
+  background: linear-gradient(90deg, rgb(195, 199, 201) 0%, rgb(190, 190, 209) 100%);
   justify-content: space-between;
   padding: 10px;
   margin-bottom: 3rem;
@@ -326,7 +326,11 @@ h1 {
   align-items: center;
   padding: 20px;
   color: var(--font-color);
-  margin-bottom: 4rem;
+  background: linear-gradient(90deg, rgba(195, 199, 201, 0.8) 0%, rgba(190, 190, 209, 0.8) 100%);
+}
+
+.page-footer a {
+  text-decoration: none;
 }
 
 .page-footer h2 {
@@ -406,10 +410,17 @@ h1 {
     padding: 25px;
   
   }
+
+  .page-footer {
+    margin-top: -5rem;
+  }
 }
 
 /* Shared media queries code */
 @media all and (max-width: 750px) {
+  body {
+    min-height: 100vh;
+  }
   .page-header {
     width: 100%;
   }
@@ -508,6 +519,11 @@ h1 {
     margin: 10px 0;
   }
 
+  .page-footer {
+    padding: 20px;
+    margin-top: 3rem;
+  }
+
 }
 
 @media all  and (min-width: 750px) and (max-width: 1024px) {
@@ -545,8 +561,7 @@ h1 {
   }
 
   .page-footer {
-    margin-bottom: 12rem;
-    margin-top: -5rem;
+    margin-top: 1rem;
   }
   
 }
@@ -610,14 +625,8 @@ h1 {
     z-index: 2;
   }
 
-  .profile {
-    flex-direction: row;
-    margin-top: -10rem;
-  }
-
   .page-footer {
-    margin-bottom: 12rem;
-    margin-top: -5rem;
+    margin-top: 3rem;
   }
 }
 
