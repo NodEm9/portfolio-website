@@ -1,5 +1,6 @@
 :root {
-  --bg-primary-color: #0a65a7;
+  --bg-primary-color: #00ac00;
+  --primary-color: #000000;
   --font-color-light: #f5f5f5;
   --border-color: #60615eab;
   --font-weight: 500;
@@ -27,9 +28,10 @@ body {
 .page-header {
   display: flex;
   justify-content: space-between;
+  position: fixed; 
   width: 100%;
   padding: 10px;
-  background: linear-gradient(90deg, rgba(195, 199, 201, 0.8) 0%, rgba(190, 190, 209, 0.8) 100%);
+  background: linear-gradient(90deg, rgb(195, 199, 201) 0%, rgb(190, 190, 209) 100%);
   margin-bottom: 3rem;
   border-bottom: 1px solid var(--border-color);
   z-index: 1;
@@ -152,7 +154,7 @@ body {
 .navigation-list__item__link--active {
   color: var(--active-color);
   font-weight: var(--font-weight-bold);
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 20px;
 }
 
@@ -182,6 +184,7 @@ h1 {
   top: 0;
   margin-top: -200px;
   font-weight: 600;
+  line-height: 1.6;
 }
 
 
@@ -194,7 +197,7 @@ h1 {
 }
 
 label {
-  display: none;
+  font-size: inherit;
 }
 
 #email,
@@ -216,12 +219,12 @@ textarea {
 }
 
 .button-primary {
-  background: var(--bg-primary-color);
-  color: var(--font-color-light);
+  color: var(--primary-color);
   padding: 10px 20px;
   border-radius: 25px;
+  font-size: calc(var(--font-size) * 0.9);
   cursor: pointer;
-  border: none;
+  border: 1px solid var(--border-color);
   transition: opacity 0.2s;
   text-decoration: none;
 }
@@ -239,10 +242,11 @@ textarea {
 }
 
 button {
+  width: 100px;
   margin-top: 6px;
   font-size: calc(var(--font-size) * 1.4);
-  font-weight: var(--font-weight-bold);
-  background: var(--bg-primary-color);
+  font-weight: var(--font-weight);
+  background: #0720ff;
   color: var(--font-color-light);
   padding: 10px 20px;
   border-radius: 5px;
@@ -289,8 +293,8 @@ button:focus {
 }
 
 .page-footer h2 {
-  font-size: calc(var(--font-size) + 1vw);
-  font-weight: var(--font-weight-bold);
+  font-size: calc(var(--font-size) + 0.5vw);
+  font-weight: var(--font-weight);
   box-shadow: var(--border-color);
 }
 
@@ -492,11 +496,11 @@ button:focus {
   .main {
     width: auto;
     margin: 0 auto;
-    padding: 10px;
+    padding: 0;
   }
 
   .contact {
-    flex-direction: column;
+    flex-direction: column; 
     padding: 0;
   }
 
@@ -505,13 +509,21 @@ button:focus {
   }
 
   .contact__form {
-    padding: 20px;
+    width: 100%;
   }
 
   form input,
   textarea,
   button {
-    width: 100%;
+    margin-left: -0.8rem;
+  }
+
+  button {
+    width: 100px;
+  }
+
+  .page-footer {
+    margin-bottom: 0;
   }
 }
 

@@ -130,14 +130,13 @@
   width: 100%;
   height: 100%;
   gap: 18px;
-  font-size: 18px;
   font-family: "Poppins", sans-serif;
 }
 
 .navigation-list__item .navigation-list__item__link  {
   font-weight: var(--font-weight);
   display: block;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .navigation-list__item__link {
@@ -156,7 +155,7 @@
 .navigation-list__item__link--active {
   color: var(--active-color);
   font-weight: var(--font-weight-bold);
-  font-size: 24px;
+  font-size: 20px;
 }
 
 a{
@@ -216,7 +215,7 @@ h1 {
 
 .button {
   padding: 15px 30px;
-  margin-bottom: 40px;
+  margin-bottom: 40px; 
   font-size: 1.8rem;
   font-weight: var(--font-weight-bold);
   text-decoration: underline;
@@ -303,7 +302,7 @@ td {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  margin-top: 1rem;
+  margin-bottom: 0;
   line-height: 1.4;
   color: var(--font-color);
   font-family: "Poppins", sans-serif;
@@ -416,7 +415,7 @@ td {
 /*Shared code  */
 @media all and (max-width: 750px) {
   .page-header {
-    width: auto;
+    width: 100%;
   }
 
   .page-header__item {
@@ -489,7 +488,12 @@ td {
   .main {
     width: auto;
     justify-content: center;
+    margin-top: 6rem;
     padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: calc(var(--font-size) * 1.5);
   }
   
   .bio-section__intro p {
@@ -533,8 +537,7 @@ td {
   }
 
   .page-footer {
-    margin-bottom: 12rem;
-    margin-top: -5rem;
+    margin-bottom: 0;
   }
   
 }

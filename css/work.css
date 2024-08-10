@@ -22,7 +22,6 @@ body {
     "header"
     "main"
     "footer";
-  grid-template-rows: auto 1fr auto;
   background-color: var(--bg-main-color);
   min-height: 100vh;
   justify-content: space-between;
@@ -74,8 +73,8 @@ body {
 
 .project {
   grid-area: main;
-  margin: 5rem 80px;
-  padding: 30px;
+  margin:  80px;
+  padding: 8px 30px;
   width: auto;
   min-height: 100vh;
 }
@@ -96,7 +95,7 @@ h1 {
   }
 
   .project-list .project-list__item {
-    background-color: #efefef;
+    background-color: rgba(1, 88, 170, 0.446);
     padding: 30px;
     width: auto;
     height: auto;
@@ -200,7 +199,43 @@ h1 {
   .navigation-list__item__link--active {
     color: var(--active-color);
     font-weight: var(--font-weight-bold);
-    text-decoration: underline;
+    text-decoration: none;
+  }
+
+  .project-card {
+    display: grid;
+    grid-template-rows: auto auto 50px auto;
+    border-radius: 10px;
+    gap: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    background: rgb(0, 189, 195);
+    width: auto;
+  }
+
+  .project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+    transition: bounce 0.5s ease-in-out forwards;
+  }
+
+  .project-card .project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .project-card h2, p, .ext-link {
+    padding: 0 20px;
+  }
+
+  .project-img .img{
+    width: 100%;
+    height: 260px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 
   .project-list .project-list__item h2 {
@@ -245,6 +280,7 @@ h1 {
     align-items: center;
     justify-content: space-between;
     margin-top: 8px;
+    padding-bottom: 1rem;
   }
 
   .ext-link .ext-link__link {
@@ -324,7 +360,8 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 47px 20px;
+  margin-bottom: 0;
   color: var(--font-color);
   background: linear-gradient(90deg, rgba(195, 199, 201, 0.8) 0%, rgba(190, 190, 209, 0.8) 100%);
 }
@@ -412,7 +449,7 @@ h1 {
   }
 
   .page-footer {
-    margin-top: -5rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -522,6 +559,7 @@ h1 {
   .page-footer {
     padding: 20px;
     margin-top: 3rem;
+    margin-bottom: 4rem;
   }
 
 }
@@ -561,12 +599,16 @@ h1 {
   }
 
   .page-footer {
-    margin-top: 1rem;
+    margin-bottom: 0rem;
   }
   
 }
 
 @media all and (max-width: 1180px) {
+  body {
+    grid-template-rows: auto auto auto;
+    min-height: 100vh;
+  }
   .navigation {
     display: none;
     animation: bounce 0.5s ease-in-out forwards;
@@ -626,7 +668,7 @@ h1 {
   }
 
   .page-footer {
-    margin-top: 3rem;
+    margin-bottom: 0rem;
   }
 }
 
