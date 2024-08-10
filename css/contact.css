@@ -17,7 +17,6 @@ body {
     "header"
     "main"
     "footer";
-  grid-template-rows: auto 1fr auto;
   background-color: var(--bg-main-color);
   min-height: min-content;
   min-height: 100vh;
@@ -516,13 +515,12 @@ input,
  .contact__details .input-wrapper{
     position: relative;
     margin-top: 0;
-    width: auto;
   }
 
  input,
   textarea {
     margin: 0;
-    width: 350px;
+    width: auto;
   }
 
   button {

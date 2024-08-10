@@ -162,7 +162,7 @@ a{
   text-decoration: none;
 }
 
-main {
+.main {
   grid-area: main;
   min-height: 100vh;
   align-items: center;
@@ -241,12 +241,11 @@ h1 {
   margin: 0 auto;
 }
 
-.skills h2 {
+h2 {
   margin-bottom: 6px;
   font-size: calc(var(--font-size) * 1.5);
   font-weight: var(--font-weight-bold);
-  margin: 2.5rem 0;
-  text-align: left;
+  margin: 2rem 0;
 }
 
 table {
@@ -274,7 +273,6 @@ tbody th {
 }
 
 td {
-  padding: 10px;
   border: 1px solid var(--border-color);
   text-align: center;
 }
@@ -317,6 +315,11 @@ td {
 
 
 @media all and (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+
   .page-header {
     width: auto;
   }
@@ -340,6 +343,7 @@ td {
 
   .main {
     width: auto;
+    margin: 0 auto;
   }
 
   .bio-section__intro p {
@@ -360,11 +364,17 @@ td {
   }
 
   table {
-    width: auto;
+    width: 80px;
+    margin: 0 auto;
   }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
+  body {
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+  
   .page-header {
     width: auto;
   }
@@ -388,6 +398,7 @@ td {
   
   .main {
     width: auto;
+    margin: 0 auto;
   }
 
   .bio-section__intro p {
@@ -404,16 +415,22 @@ td {
 
   .skills {
     width: auto;
-   
+    margin: 0 auto;
   }
 
   table {
-    width: auto;
+    width: 80px;
+    margin: 0 auto;
   }
 }
 
 /*Shared code  */
 @media all and (max-width: 750px) {
+  body {
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+
   .page-header {
     width: 100%;
   }
@@ -486,10 +503,7 @@ td {
   }
 
   .main {
-    width: auto;
-    justify-content: center;
-    margin-top: 6rem;
-    padding: 0 1rem;
+    margin-top: 1rem;
   }
 
   h1 {
@@ -511,19 +525,28 @@ td {
     padding: 0 1rem 1rem 0;
   }
 
-  .skills {
-    width: 100%;
+  .skills  {
+    width: auto;
+    margin: 0 auto;
+    padding: 2rem 0;
   }
 
   table {
-    width: 100%;
+    width: 80px;
   }
+
+  .page-footer {
+    width: auto;
+    margin-bottom: 0;
+    overflow-x: hidden;
+  }
+  
 }
 
 @media all  and (min-width: 750px) and (max-width: 1024px) {
   body {
-    width: 100%;
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   .page-header .hamburger {
@@ -531,13 +554,25 @@ td {
     transform: translate(225px, 0);
   }
 
+  .main {
+    width: auto;
+  }
+
   .navigation {
     display: block;
-    width: 100%;
   }
 
   .page-footer {
     margin-bottom: 0;
+  }
+
+  .skills {
+    width: auto;
+    margin: 0 auto;
+  }
+
+  table {
+    width: 500px;
   }
   
 }

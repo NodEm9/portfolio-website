@@ -31,7 +31,6 @@
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 1em;
   background-color: var(--bg-main-color);
   min-height: 100vh;
   overflow: hidden;
@@ -494,7 +493,7 @@ body {
   .page-footer {
     margin-top: -7rem;
     margin-bottom: 0;
-    padding: 20px;
+    padding: 30px 10px;
     background: linear-gradient(90deg, rgba(195, 199, 201, 0.8) 0%, rgba(190, 190, 209, 0.8) 100%);
   }
 
@@ -544,7 +543,6 @@ body {
     flex-direction: row;
     top: 0;
   }
-
 
   .page-footer {
     margin-bottom: 0;
