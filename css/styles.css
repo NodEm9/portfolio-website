@@ -293,7 +293,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 47px 20px;
+  padding: 30px;
   margin-bottom: 0;
   color: var(--font-color);
   background: linear-gradient(90deg, rgba(195, 199, 201, 0.8) 0%, rgba(190, 190, 209, 0.8) 100%);
@@ -310,20 +310,12 @@ body {
   text-decoration: none;
 }
 
-.page-footer p span {
-  font-weight: var(--font-weight-bold);
-  font-style: italic;
-  color: var(--font-color);
-  box-shadow: var(--border-color);
-
-}
-
 #social-icons {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 #facebook,
@@ -501,7 +493,8 @@ body {
 
   .page-footer {
     margin-top: -7rem;
-    padding: 17px 20px;
+    margin-bottom: 0;
+    padding: 20px;
     background: linear-gradient(90deg, rgba(195, 199, 201, 0.8) 0%, rgba(190, 190, 209, 0.8) 100%);
   }
 
@@ -523,7 +516,8 @@ body {
 
 @media all and (min-width: 750px) and (max-width: 1024px) {
   body {
-    min-height: 100vh;
+    min-height: auto;
+    margin: 0 auto;
   }
 
   .page-header .hamburger {
@@ -539,20 +533,24 @@ body {
     display: block;
   }
 
-  main {
-    padding: 0;
+  #main {
+    padding: 20px 0;
+    height: 1120px;
+    margin-top: -2rem;
   }
 
   .profile {
+    position: relative;
     flex-direction: row;
-    margin-top: -10rem;
+    top: 0;
   }
 
 
   .page-footer {
-    margin-bottom: 12rem;
-    margin-top: -5rem;
-  }
+    margin-bottom: 0;
+    padding: 30px;
+    height: 260px;
+  } 
 
 }
 

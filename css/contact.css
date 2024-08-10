@@ -321,7 +321,7 @@ button:focus {
   }
 
   main {
-    width: 100%;
+    width: auto;
   }
 
   .contact {
@@ -341,10 +341,13 @@ button:focus {
     width: 100%;
   }
 
-  form input,
-  textarea,
-  button {
+input,
+  textarea {
     width: 100%;
+  }
+
+  button {
+    width: 100px;
   }
 }
 
@@ -379,22 +382,22 @@ button:focus {
   }
 
   .contact {
-    padding: 20px;
+    padding: 0 20px;
   }
 
-  .contact__form {
+  .contact__form .contact__details {
     width: auto;
-  }
-
-  .contact__details {
     margin: 0;
     margin-top: 0;
   }
 
   input,
-  textarea,
-  button {
+  textarea {
     width: 100%;
+  }
+
+  button {
+    width: 100px;
   }
 }
 
@@ -407,25 +410,29 @@ button:focus {
     padding: 0 20px;
   }
 
-  .contact__form {
-    width: 100%;
-  }
-
   .contact__details {
     margin: 0;
     margin-top: 0;
   }
 
   input,
-  textarea,
-  button {
+  textarea {
     width: 100%;
+  }
+
+  button {
+    width: 100px;
   }
 
 }
 
 /* Shared style */
 @media all and (max-width: 750px) {
+  body {
+    min-height: auto;
+    overflow-x: hidden;
+  }
+
   .page-header__item {
     margin-left: -20px;
   }
@@ -496,26 +503,26 @@ button:focus {
   .main {
     width: auto;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    height: auto;
   }
 
   .contact {
     flex-direction: column; 
-    padding: 0;
+    padding: 30px 0;
   }
 
-  .contact__details {
+ .contact__details .input-wrapper{
+    position: relative;
     margin-top: 0;
+    width: auto;
   }
 
-  .contact__form {
-    width: 100%;
-  }
-
-  form input,
-  textarea,
-  button {
-    margin-left: -0.8rem;
+ input,
+  textarea {
+    margin: 0;
+    width: 350px;
   }
 
   button {
