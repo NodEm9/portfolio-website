@@ -1,7 +1,6 @@
 :root {
   --primary-color: #087445;
-  --background-color: #005a3f;
-  --bg-primary-color: #0a65a7;
+  --bg-primary-color: #5affb2;
   --bg-secondary-color: transparent;
   --tertiary-color: #2ca5fc;
   --font-color: #333;
@@ -14,6 +13,7 @@
   --font-weight-bold: 700;
   --font-size: 16px;
   --close-button: #ff6347;
+  --gradient-color: linear-gradient(90deg, rgba(4, 130, 75, 0.662) 0%, rgba(21, 86, 60, 0.8) 100%);
 }
 
 body {
@@ -22,12 +22,15 @@ body {
     "header"
     "main"
     "footer";
+  grid-template-rows: auto 1fr auto;
   background-color: var(--bg-main-color);
   min-height: 100vh;
-  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
-  margin: 0 auto;
 }
 
 
@@ -36,10 +39,10 @@ body {
   position: fixed;
   display: flex;
   width: 100%;
-  background: linear-gradient(90deg, rgb(195, 199, 201) 0%, rgb(190, 190, 209) 100%);
   justify-content: space-between;
   padding: 10px;
   margin-bottom: 3rem;
+  background: var(--bg-main-color);
   border-bottom: 1px solid var(--border-color);
   z-index: 1;
 } 
@@ -48,13 +51,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  color: #021092;
+  color: var(--primary-color);
   padding: 0 0 0 38px;
-}
-
-.website__name {
-  cursor: pointer;
-  font-size: 1.5rem;
 }
 
 #w__logo {
@@ -66,51 +64,52 @@ body {
 .website__owner {
   display: flex;
   flex-direction: column;
-  font-size: 28px;
-  font-weight: 700;
+  font-size: calc(var(--font-size) * 1.2);
+  font-weight: var(--font-weight-bold);
   line-height: 1;
 }
 
 .project {
   grid-area: main;
-  margin:  80px;
+  margin: 65px 50px;
   padding: 8px 30px;
   width: auto;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: calc(var(--font-size) * 2);
+  font-size: calc(var(--font-size) * 4);
   font-weight: var(--font-weight-bold);
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.8rem;
 }
 
 
 @supports (display: grid) {
- .project .project-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+ .project  {
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+    padding: 20px;
+    width: 100vw;
   }
 
-  .project-list .project-list__item {
-    background-color: rgba(1, 88, 170, 0.446);
-    padding: 30px;
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 50px;
+    margin: 0 120px;
+    align-items: center;
+    justify-content: center;
     width: auto;
     height: auto;
     font-size: var(--font-size);
     border-radius: 3px;
     font-weight: var(--font-weight);
     overflow: hidden;
-    transition: all 0.3s ease;
-    position: relative;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.306);
-  }
-
-  .project-list__item {
-    display: grid;
-    justify-content: space-between;
   }
 
  .navigation {
@@ -133,7 +132,7 @@ h1 {
 
   .close {
     display: none;
-    background: red;
+    background: var(--close-button);
   }
 
   .hamburger {
@@ -159,7 +158,7 @@ h1 {
   .line3 {
     width: 30px;
     height: 3px;
-    background: #000000;
+    background: var(--font-color);
     margin: 8px;
     font-weight: 600;
     transition: 0.4s;
@@ -174,7 +173,7 @@ h1 {
     width: auto;
     height: 100%;
     gap: 20px;
-    font-size: 20px;
+    font-size: 17px;
   }
 
  .navigation-list__item .navigation-list__item__link  {
@@ -204,23 +203,24 @@ h1 {
 
   .project-card {
     display: grid;
-    grid-template-rows: auto auto 50px auto;
+    grid-template-rows: 300px 50px auto 50px;
     border-radius: 10px;
-    gap: 5px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-    background: rgb(0, 189, 195);
-    width: auto;
+    box-shadow: 4px 4px 10px var(--border-color);
+    background: var(--bg-primary-color);
+    width: 350px;
+    height: 550px;
+    padding-bottom: 1rem;
   }
 
   .project-card:hover {
     transform: scale(1.02);
-    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 20px var(--border-color);
     transition: bounce 0.5s ease-in-out forwards;
   }
 
   .project-card .project-img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     object-position: top;
     border-top-left-radius: 10px;
@@ -229,76 +229,67 @@ h1 {
 
   .project-card h2, p, .ext-link {
     padding: 0 20px;
+    max-height: fit-content;
   }
 
-  .project-img .img{
+  .project-card .project-img .img{
     width: 100%;
     height: 260px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
 
-  .project-list .project-list__item h2 {
+  .project-card h2 {
     text-align: center;
     font-size: calc(var(--font-size) * 1.2);
     font-weight: var(--font-weight-bold);
     margin-bottom: 8px;
   }
 
-  .project-list__item p {
+  .project-card p {
     font-weight: normal;
     font-kerning: normal;
     font-variant-ligatures: common-ligatures;
-    margin: 20px 0px;
+    margin: 5px 0px;
     line-height: 1.6;
   }
-
-  .project-list__item--img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .project-list__item h2,
-  .project-list__item p,
-  .project-list__item a {
-    font-size: inherit;
-    margin: 0;
-    padding: 0;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out
-  }
   
-  .ext-link {
+  .project-card .ext-link {
     display: flex;
     width: auto;
     align-items: center;
     justify-content: space-between;
-    margin-top: 8px;
-    padding-bottom: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .ext-link .ext-link__link {
     font-size: var(--font-size);
     font-weight: var(--font-weight-bold);
     text-decoration: none;
-    padding: 8px;
-    border: 3px solid #6b9e1ac7;
     color: var(--font-color);
     border-radius: 5px;
   }
 
   .ext-link__link:hover {
-    background-color: #6b9e1ac7;
+    background-color: var(--tertiary-color);
     color: var(--font-color-light);
   
   }
 
+  .page-footer {
+    grid-area: footer;
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 47px 20px;
+    background: var(--gradient-color);
+    color: var(--font-color);
+    font-weight: var(--font-weight-bold);
+  }
 }
 
 #icon,
@@ -352,18 +343,7 @@ h1 {
   height: 30px;
   margin: 0 5px;
   cursor: pointer;
-}
-
-.page-footer {
-  grid-area: footer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 47px 20px;
-  margin-bottom: 0;
-  color: var(--font-color);
-  background: linear-gradient(90deg, rgba(195, 199, 201, 0.8) 0%, rgba(190, 190, 209, 0.8) 100%);
+  color: var(--font-color-light);
 }
 
 .page-footer a {
@@ -379,7 +359,6 @@ h1 {
 .page-footer p span {
   font-weight: var(--font-weight-bold);
   font-style: italic;
-  color: var(--font-color);
   box-shadow: var(--border-color);
 }
 
@@ -409,6 +388,7 @@ h1 {
     grid-template-columns: 1fr;
     font-size: 16px;
     padding: 5px;
+    margin: auto 50px;
   }
 
   .project-list .project-list__item h2,
@@ -460,6 +440,7 @@ h1 {
   }
   .page-header {
     width: 100%;
+    padding: 18px 0;
   }
 
   .page-header__item {
@@ -522,7 +503,7 @@ h1 {
 
   .page-header .hamburger {
     display: block;
-    transform: translate(-30px, 0);
+    transform: translate(-10px, 0);
   }
 
   .project h1 {

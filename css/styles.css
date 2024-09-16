@@ -14,6 +14,7 @@
   --font-weight: 500;
   --font-weight-bold: 700;
   --font-size: 16px;
+  --gradient-color: linear-gradient(90deg, rgba(4, 130, 75, 0.662) 0%, rgba(21, 86, 60, 0.8) 100%);
 }
 
 
@@ -44,7 +45,7 @@ body {
   justify-content: space-between;
   width: 100%;
   padding: 10px;
-  background: linear-gradient(90deg, rgb(195, 199, 201) 0%, rgb(190, 190, 209) 100%);
+  background: var(--bg-main-color);
   margin-bottom: 3rem;
   border-bottom: 1px solid var(--border-color);
   z-index: 1;
@@ -60,23 +61,20 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.website__name {
-  cursor: pointer;
-  font-size: 1.5rem;
-}
-
 #w__logo {
   font-weight: bold;
   margin-right: 3px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .website__owner b {
   display: flex;
   flex-direction: column;
   line-height: 1;
-  font-size: 28px;
-  font-weight: 700;
+  font-size: calc(var(--font-size) * 1.2);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
 }
 
 
@@ -288,14 +286,17 @@ body {
 }
 
 .page-footer {
+  grid-area: footer;
+  grid-column: span 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 47px 20px;
+  background: var(--gradient-color);
   color: var(--font-color);
-  background: linear-gradient(90deg, rgba(195, 199, 201, 0.8) 0%, rgba(190, 190, 209, 0.8) 100%);
+  font-weight: var(--font-weight-bold);
 }
 
 .page-footer h2 {
@@ -314,7 +315,6 @@ body {
   justify-content: center;
   align-items: center;
   margin: 10px;
-  /* margin-bottom: 1rem; */
 }
 
 #facebook,
@@ -358,7 +358,6 @@ body {
 
   .page-header .hamburger {
     display: block;
-    transform: translate(-25px, 0);
   }
 
   .close {
@@ -418,8 +417,10 @@ body {
   body {
     overflow: auto;
   }
+
   .page-header {
     width: 100%;
+    padding: 18px 0;
   }
 
   .page-header__item {
@@ -431,6 +432,11 @@ body {
     flex-direction: column;
     font-size: 14px;
     font-weight: 700;
+  }
+
+  .page-header .hamburger {
+    display: block;
+    transform: translate(-10px, 0);
   }
 
   .navigation {
@@ -494,7 +500,6 @@ body {
     margin-top: -7rem;
     margin-bottom: 0;
     padding: 30px 10px;
-    background: linear-gradient(90deg, rgba(195, 199, 201, 0.8) 0%, rgba(190, 190, 209, 0.8) 100%);
   }
 
   #icon {
