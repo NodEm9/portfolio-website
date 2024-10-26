@@ -1,143 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon_io/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="dist/style.min.css" />
-    <title>Portfolio Website</title>
-  </head>
-  <body>
-    <header id="header" class="page-header">
-      <div class="page-header__item">
-        <a href="index.html" class="website__name">
-          <img
-            src="img/w-logo.svg"
-            id="w__logo"
-            alt="Emma Nodol website log"
-            width="45"
-            height="45"
-          />
-        </a>
-        <span class="website__owner"><b>Emma</b><b>Nodol</b></span>
-      </div>
-      <div class="hamburger burgerButton">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-      <nav class="navigation">
-        <p class="close">X</p>
-        <ul id="menubar" role="navigation" class="navigation-list">
-          <li role="presentation" class="navigation-list__item">
-            <a 
-              href="index.html" 
-              role="menuitem" 
-              class="navigation-list__item__link--active"
-              >
-              Home
-              </a>
-          </li>
-          <li role="presentation" class="navigation-list__item">
-            <a
-              href="work.html"
-              role="menuitem"
-              class="navigation-list__item__link"
-              >Work</a
-            >
-          </li>
-          <li role="presentation" class="navigation-list__item">
-            <a href="about.html" role="menuitem" class="navigation-list__item__link"
-              >About Me</a
-            >
-          </li>
-          <li role="presentation" class="navigation-list__item">
-            <a href="contact.html" role="menuitem" class="navigation-list__item__link"
-              >Contact Me</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main id="main">
-      <div  class="profile">
-        <img src="./img/picture-of-emmanuel.webp" alt="Emma personal picture" class="profile__portrait" />
-        <div class="profile__info">
-          <h1 id="greetings">Hello! 👋</h1>
-          <p>
-            My name is <strong>Emmanuel Nodolomwanyi</strong>. <br />
-            I am a  <span id="profession">Full-Stack Web developer</span> based in Germany.
-          </p>
-          <br />
-          <a
-            href="work.html"
-            class="button-secondary"
-            rel="noopener noreferrer"
-          >
-            <span id="icon">&#128065;</span>
-            View My Work
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="dist/style.min.css" /> -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Portfolio Website</title>
+</head>
+
+<body>
+  <header id="header" class="page-header">
+    <a href="index.html" class="website__name">
+      Emmanuel Nodolo
+    </a>
+    <div class="hamburger burgerButton">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <nav class="navigation">
+      <p class="close">X</p>
+      <ul id="menubar" role="navigation" class="navigation-list">
+        <li role="presentation" class="navigation-list__item">
+          <a href="#landing" role="menuitem" class="navigation-list__item__link">
+            Home
           </a>
+        </li>
+        <li role="presentation" class="navigation-list__item">
+          <a href="#about" role="menuitem" class="navigation-list__item__link">About Me</a>
+        </li>
+        <li role="presentation" class="navigation-list__item">
+          <a href="#projects" role="menuitem" class="navigation-list__item__link">Projects</a>
+        </li>
+        <li role="presentation" class="navigation-list__item">
+          <a href="#contact" role="menuitem" class="navigation-list__item__link">Contact Me</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <section id="landing" class="hero">
+      <picture>
+        <source srcset="/media/hero-img.avif & /media/hero-avif-img.avif" width="500 & 800" type="image/avif"
+          media="(orientation: portrait)" class="img" />
+        <source srcset="./media/hero.webp & ./media/hero-img.webp" width="500 & 800" type="image/webp" (orientation:
+          portrait) class="img" />
+        <img src="./media/hero.jpg" alt="Hero Image" class="hero-picture" />
+      </picture>
+      <div class="intro">
+        <h1 id="greetings">Hello👋 I&apos;m<span> Emmanuel</span></h1>
+        <p>
+          With a diverse background in digitization, marketing, and banking, I bring a unique blend of skills to web
+          development. My journey from roles in document digitization, telecommunications marketing, and banking sparked
+          a passion for coding, leading me to complete front-end and full-stack development programs at Udacity and
+          CareerFoundry. Equipped with expertise in JavaScript, HTML, CSS, React, Angular, Next.js, Node.js, MongoDB,
+          and SQL, I'm eager to use my skills to create impactful web solutions
+        </p>
+        <br />
+        <a href="work.html" class="button-secondary" rel="noopener noreferrer">
+          More About Me
+          <span id="icon">&#x276E;</span>
+        </a>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <h2 class="about_title">About Me</h2>
+      <div class="about_content">
+        <div class="about_content_item">
+          <img src="media/certificate-1356.svg" alt="Certification Icon" class="icons" />
+          <div class="about_icon">
+            <h3 class="">Certified Web Developer</h3>
+          </div>
+          <blockquote>I completed a six month full-stack web development course with the guidance of a personal tutor
+            and a mentor. Amongst others I built full-stack projects using serverless framework, AWS, Google Calendar
+            Api with TDD, BDD approach, MERN stack and a React Native App.</blockquote>
+        </div>
+        <div class="about_content_item">
+          <img src="media/engineer-team.svg" alt="Team Player" class="icons" />
+          <div class="about_icon">
+            <h3 class="">Team Player</h3>
+          </div>
+          <blockquote>I completed a six month full-stack web development course with the guidance of a personal tutor
+            and a mentor. Amongst others I built full-stack projects using serverless framework, AWS, Google Calendar
+            Api with TDD, BDD approach, MERN stack and a React Native App.</blockquote>
+        </div>
+        <div class="about_content_item">
+          <img src="media/lifelong-learner.svg" alt="Certification Icon" class="icons" />
+          <div class="about_icon">
+            <h3 class="">Lifelong Learner</h3>
+          </div>
+          <blockquote>I completed a six month full-stack web development course with the guidance of a personal tutor
+            and a mentor. Amongst others I built full-stack projects using serverless framework, AWS, Google Calendar
+            Api with TDD, BDD approach, MERN stack and a React Native App.</blockquote>
+        </div>
+        <div class="about_content_item">
+          <img src="media/graduation.svg" alt="Team Player" class="icons" />
+          <div class="about_icon">
+            <h3 class="">Barchelor Graduate</h3>
+          </div>
+          <blockquote>I completed a six month full-stack web development course with the guidance of a personal tutor
+            and a mentor. Amongst others I built full-stack projects using serverless framework, AWS, Google Calendar
+            Api with TDD, BDD approach, MERN stack and a React Native App.</blockquote>
+        </div>
+        <div class="about_content_item">
+          <img src="media/coding.svg" alt="Certification Icon" class="icons" />
+          <div class="about_icon">
+            <h3 class="">Beside Coding</h3>
+          </div>
+          <blockquote>I completed a six month full-stack web development course with the guidance of a personal tutor
+            and a mentor. Amongst others I built full-stack projects using serverless framework, AWS, Google Calendar
+            Api with TDD, BDD approach, MERN stack and a React Native App.</blockquote>
         </div>
       </div>
-    </main>
-    <footer id="footer" class="page-footer">
-      <h2>Find Me</h2>
-      <div id="social__icons">
-       <a href="#">
-        <img
-        src="./img/facebook.svg"
-        id="facebook"
-        alt="connect with me on facebook"
-      />
-       </a>
-        <a href="https://github.com/NodEm9" target="_blank">
-          <img
-          src="./img/github.svg"
-          id="github"
-          alt="Check my code on github and connect with me here"
-        />
-        </a>
-       <a href="https://www.linkedin.com/in/emmanuel-nodolomwanyi" target="_blank">
-        <img
-        src="./img/linkedin.svg"
-        id="linkedin"
-        alt="Connect with me on linkedin"
-      />
-       </a>
+    </section>
+    <section class="skills">
+      <p>JavaScript</p>
+      <p>HTML</p>
+      <p>CSS</p>
+      <p>React</p>
+      <p>Angular</p>
+      <p>Next.js</p>
+      <p>Serverless Framework</p>
+      <p>AWS</p>
+      <p>Node.js</p>
+      <p>MongoDB</p>
+      <p>SQL</p>
+      <p>Git</p>
+    </section>
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-wrapper">
+        <div class="card">
+          <div class="card-header">
+            <img src="media/myflix-angular.png" class="card-img" alt="Meet App">
+            <h2>Course Project</h2>
+          </div>
+          <div class="card-body">
+            <h3>myFlix-Angular-Client</h3>
+            <div class="card-text">
+              <p class="description">
+                Angular SPA built using Angular CLI, Angular Material and Angular Flex Layout. The app is a movie
+                database that allows users to sign up, log in, view movie details, and save favorite movies.
+              </p>
+              <small class="techstack">
+                <h4>Techstack: </h4>
+                <span>Angular, Angular Material, Nodejs, Express, MongoDB</span>
+              </small>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="https://github.com/NodEm9/myFlix-angular-clients" target="_blank">Code</a>
+            <a href="https://nodem9.github.io/myFlix-angular-clients" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <img src="media/meet-app.png" class="card-img" alt="Meet App">
+            <h2>Course Project</h2>
+          </div>
+          <div class="card-body">
+            <h3>Meet App</h3>
+            <div class="content-wrapper">
+              <p class="description">A React SPA built using TDD and BDD approaches. This app is a PWA that allows users
+                to view, filter and
+                save events. The App fetches events data using Google Calendar API and stored data in the AWS cloud.
+              </p>
+              <small class="techstack">
+                <h4>Techstack:</h4>
+                <span>React, Google Calendar API, AWS, Serverless, Atatus-spa, Jest, Gherkins, Puppeteer,
+                  Jest-Cucumber</span>
+              </small>
+            </div>
+          </div>
+          <p class="card-footer">
+            <a href="https://github.com/NodEm9/meet" target="_blank">Code</a>
+            <a href="about.html" target="_blank">Demo</a>
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <img src="media/chat-app.gif" frameborder="0" />
+            <h2>Course Project</h2>
+          </div>
+          <div class="card-body">
+            <h3>Chat App</h3>
+            <div class="content-wrapper">
+              <p class="description">Chat App built with React Native, Expo, Firebase and Gifted Chat. The app allows
+                users to choose a
+                custom background for the chat screen and send images and videos from the phone storage.
+              </p>
+              <small class="techstack">
+                <h4>Techstack:</h4>
+                <span>React Native, Expo, Firebase, Gifted Chat</span>
+              </small>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="https://github.com/NodEm9/chat-app" target="_blank">Code</a>
+            <a href="chat-app.gif" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <img src="media/myflix-client.avif" class="card-img" alt="Meet App">
+            <h2>Course Project</h2>
+          </div>
+          <div class="card-body">
+            <h3>myFlix Client App</h3>
+            <div class="content-wrapper">
+              <p class="description">
+                SPA built using React, Nodejs, Express and MongoDB. The app is a movie database that allows users to sign up, log in, view movie details, and save favorite movies.
+              </p>
+              <small class="techstack">
+                <h4>Techstack:</h4>
+                <span>React, Nodejs, Express, MongoDB, Mongoose, Netlify</span>
+              </small>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="https://github.com/NodEm9/myFlix-client" target="_blank">Code</a>
+            <a href="https://myflix-movieoasis.netlify.app/login" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <img src="media/ecopicture.png" class="card-img" alt="Meet App">
+            <h2>Personal Project</h2>
+          </div>
+          <div class="card-body">
+            <h3>Ecommerce Website</h3>
+            <div class="content-wrapper">
+              <p class="description">
+                A Fullstack Ecommerce website built with Next.js, Sanity, Tailwind, ShadcnUI and Stripe. The app allows view all products, poducts category, add products to cart and make payment.
+              </p>
+              <small class="techstack">
+                <h4>Techstack:</h4>
+                <span>Next.js, Sanity, Tailwind, ShadcnUI, Stripe</span>
+              </small>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="https://github.com/NodEm9/ecommerce" target="_blank">Code</a>
+            <a href="https://ecommerce-rust-two.vercel.app" target="_blank">Demo</a>
+          </div>
+        </div>
       </div>
-    </footer>
+    </section>
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p class="home">&#127968; <span>Gelsenkirchen</span></p>
+      <span>
+        &#x2709;
+        <a href="mailto:emma.nodolomwanyi@gmail.com">emma.nodolomwanyi@gmail.com</a>
+      </span>
+    </section>
+  </main>
+  <footer id="footer" class="page-footer">
+    <h2>Find Me</h2>
+    <div id="social__icons">
+      <a href="https://x.com/nodo_emma" aria-label="My X handle" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X logo" id="twitter">
+      </a>
+      <a href="https://github.com/NodEm9" target="_blank" rel="noopener noreferrer">
+        <img src="media/github-mark.png" id="github" alt="Check my code on github and connect with me here" />
+      </a>
+      <a href="https://www.linkedin.com/in/emmanuel-nodolomwanyi" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" id="linkedin" alt="Connect with me on linkedin" />
+      </a>
+      <a
+      href="https://medium.com/@padave805" aria-label="My Medium handle" target="_blank"
+      class="medium"
+      rel="noopener noreferrer"
+    >
+      <img src="/media/medium-icon-svgrepo-com.svg" alt="Medium Logo" id="medium">
+    </a>
+    </div>
+  </footer>
+  <div class="bottom-footer">
+    <p class="">&copy; Copyright 2024</p>
+    <p class="">Designed and Develop by Emmanuel Nodolomwanyi</p>
+  </div>
+  <!-- <script src="js/script.js"></script> -->
+  <script src="js/scroller.js"></script>
+  <script src="js/tota11y.min.js"></script>
+</body>
 
-    <script src="js/script.js"></script>
-    <script src="./js/navbar.js"></script>
-  </body>
 </html>
