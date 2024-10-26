@@ -1,98 +1,33 @@
-let validation = (function () {
-  let form = document.querySelector('.contact__form');
-  let emailInput = document.querySelector('#email');
-  let phoneNumberInput = document.querySelector('#telephone');
-  let messageInput = document.querySelector('#message');
+let navigationBar = (function () {
+  let navToggle = document.querySelector('.hamburger');
+  let nav = document.querySelectorAll('.navigation');
+  let closeButton = document.querySelector('.close');
 
-  function showErrorMessage(input, message) { 
-    let container = input.parentElement;
+  let show = false;
 
-    let error = container.querySelector('.error-message');
-    if (error) {
-      container.removeChild(error);
+  // Toggle navigation
+  function toggleNav() {
+    if (!show) {
+      nav.forEach(item => item.classList.add('hide'));
+      show = true;
+    } else {
+      nav.forEach(item => item.classList.remove('hide'));
+      show = false;
     }
-    if (message) {
-      let error = document.createElement('div');
-      error.classList.add('error-message');
-      error.innerText = message;
-      container.appendChild(error);
-    }
+
+    return show;
+  }
+  // Burger button
+  function burgerButton() {
+    return toggleNav();
   }
 
-  //Validate email
-  function validateEmail() {
-    let value = emailInput.value;
+  nav.forEach(item => item.addEventListener('click', burgerButton));
+  navToggle.addEventListener('click', burgerButton);
+  closeButton.addEventListener('click', burgerButton);
 
-    if (!value) {
-      showErrorMessage(emailInput, 'Email is required');
-      return false;
-    }
-    if (value.indexOf('@') === -1) {
-      showErrorMessage(emailInput, 'Invalid email');
-      return false;
-    }
-
-    if(value.indexOf('.') === -1) {
-      showErrorMessage(emailInput, 'Invalid email');
-      return false;
-    }
-
-    showErrorMessage(emailInput, null);
-    return true;
-  }
-
-  function validatePhoneNumber() { 
-    let value = phoneNumberInput.value;
-    if (!value) {
-      showErrorMessage(phoneNumberInput, 'Phone number is required');
-      return false;
-    }
-    if (value.length < 10) {
-      showErrorMessage(phoneNumberInput, 'Invalid phone number');
-      return false;
-    }
-
-    showErrorMessage(phoneNumberInput, null);
-    return true;
-  }
-
-  function validateMessage() { 
-    let value = messageInput.value;
-    if (!value) {
-      showErrorMessage(messageInput, 'Message is required');
-      return false;
-    }
-
-    showErrorMessage(messageInput, null);
-    return true;
-  }
-
-  function validateForm() { 
-    let isValidEmail = validateEmail();
-    let isValidPhoneNumber = validatePhoneNumber();
-    let isValidMessage = validateMessage();
-
-    return isValidEmail && isValidPhoneNumber && isValidMessage;
-  }
-
-  emailInput.addEventListener('input', validateEmail);
-  phoneNumberInput.addEventListener('input', validatePhoneNumber);
-  messageInput.addEventListener('input', validateMessage);
-
-  form.addEventListener('submit', (e) => { 
-    e.preventDefault();
-    if (validateForm()) {
-      alert('Form submitted');
-    }
-  });
-
-
-  return {
-    validateEmail,
-    validatePhoneNumber,
-    validateMessage,
-    validateForm
-  }
-})();
+  return burgerButton
+  
+})();  // IIFE
 
 
