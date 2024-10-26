@@ -1,0 +1,18 @@
+.page-header {
+  margin: 0;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #eaecef;
+}
+
+#backBtn {
+  font-size: 24px;
+  color: #0366d6;
+  margin: 40px 20px;
+  padding: 20px;
+  text-decoration: none;
+}
+
+#backBtn span {
+  color: #000;
+  font-weight: bolder;
+}
